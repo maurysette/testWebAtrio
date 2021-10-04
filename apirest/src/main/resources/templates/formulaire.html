@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Informations modifications delete</title>
+</head>
+<body>
+
+<H3>formulaire contact </H3>
+<form th:action="@{/api/" method="post">
+ <input type="text" name="nom" th:value="${api.nom}" />
+ <input type="text" name="prenom" th:value="${api.prenom}" />
+ <input type="text" name="dateNaissance" th:value="${api.dateNaissance}" />
+  <input type="text" name="age" th:value="${api.age}" />
+ <input type="submit" value="ajouter">
+	 </form>
+</body>
+</html>
+
