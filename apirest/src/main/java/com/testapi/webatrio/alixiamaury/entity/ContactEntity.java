@@ -11,7 +11,7 @@ import javax.persistence.Table;
 import lombok.Data;
 
 
-@Entity (name = "contact")
+@Entity (name = "Contact")
 @Table (name = "contact")
 public class ContactEntity {
 	@Id
