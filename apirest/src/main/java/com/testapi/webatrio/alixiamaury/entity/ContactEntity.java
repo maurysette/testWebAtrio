@@ -10,8 +10,7 @@ import javax.persistence.Table;
 
 import lombok.Data;
 
-//annotation Lombok gère les getters et setters
-@Data
+
 @Entity (name = "contact")
 @Table (name = "contact")
 public class ContactEntity {
@@ -26,5 +25,36 @@ public class ContactEntity {
 	private Date date;
 	@Column(name="contact_age")
 	private int age;
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getNom() {
+		return nom;
+	}
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	public String getPrenom() {
+		return prenom;
+	}
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
 
 }
