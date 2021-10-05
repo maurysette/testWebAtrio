@@ -10,10 +10,14 @@
  <input type="text" name="nom" th:value="${nom}" />
  <input type="text" name="prenom" th:value="${prenom}" />
  <input type="text" name="dateNaissance" th:value="${dateNaissance}" />
-  <input type="text" name="age" th:value="${age}" />
+ <input type="text" name="age" th:value="${age}" />
  <input type="submit" value="ajouter">
-	</form>
-	<p th:text="${message}"></p>
+</form>
+<p th:text="${message}"></p>
+
+<ul>
+	<li><td th:text="${nom}"></td> <td th:text="${prenom}"><td th:text="${dateNaissance}"><td th:text="${age}"></td></a></li> 
+</ul> 
 </body>
 </html>
 

@@ -30,7 +30,11 @@ public class ContactRepository  {
 		entity.setPrenom(prenom);
 		entity.setDate(dateNaissance);
 		entity.setAge(age);
-		em.persist(entity);
+		try{
+			em.persist(entity);
+		}catch(Exception e) {
+			return e.toString();
+		}
 	    return "Création réussie";
 	}
 	
