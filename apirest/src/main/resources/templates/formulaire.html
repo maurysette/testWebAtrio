@@ -2,11 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Informations modifications delete</title>
+<title>formulaire</title>
 </head>
 <body>
 <H3>formulaire contact </H3>
-<form th:action="@{/formulaire}" method="post" >
+<form th:action="@{/api/formulaire}" method="post" >
  <input type="text" name="nom" th:value="${nom}" />
  <input type="text" name="prenom" th:value="${prenom}" />
  <input type="text" name="dateNaissance" th:value="${dateNaissance}" />

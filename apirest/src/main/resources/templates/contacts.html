@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Tous les contacts</title>
+</head>
+<body>
+<tr th:each="contact : ${contacts}">
+<ul>
+	<li><td th:text="${contact.nom}"></td> <td th:text="${contact.prenom}"><td th:text="${contact.dateNaissance}"><td th:text="${contact.age}"></td></a></li> 
+</ul> 
+</body>
+</html>
