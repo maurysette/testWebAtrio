@@ -6,8 +6,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-
 import com.testapi.webatrio.alixiamaury.entity.ContactEntity;
 import com.testapi.webatrio.alixiamaury.model.ContactModel;
 import com.testapi.webatrio.alixiamaury.repository.ContactRepository;
@@ -19,8 +17,13 @@ public class ContactService {
 	@Autowired
 	private ContactRepository repo;
 	
-	public List<ContactEntity> listeContact() {
-		return this.repo.listeContact();
+	public List<ContactModel> listeContact() {
+		List<ContactEntity> entities = this.repo.listeContact();
+
+		List<ContactModel> result = new ArrayList<>();
+		entities.forEach(entity -> result.add(convert(entity)));
+
+		return result;
 	}
 
 	public String deleteContact(final Long id) {

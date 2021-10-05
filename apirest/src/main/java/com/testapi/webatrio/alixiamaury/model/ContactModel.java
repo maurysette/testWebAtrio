@@ -8,7 +8,7 @@ public class ContactModel {
 	private long id;
 	private String nom;
 	private String prenom;
-	private Date date;
+	public Date dateNaissance;
 	private int age;
 	public long getId() {
 		return id;
@@ -29,10 +29,10 @@ public class ContactModel {
 		this.prenom = prenom;
 	}
 	public Date getDate() {
-		return date;
+		return dateNaissance;
 	}
 	public void setDate(Date date) {
-		this.date = date;
+		this.dateNaissance = date;
 	}
 	public int getAge() {
 		return age;

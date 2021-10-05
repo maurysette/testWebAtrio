@@ -22,7 +22,7 @@ public class ContactEntity {
 	@Column(name="contact_prenom")
 	private String prenom;
 	@Column(name="contact_date")
-	private Date date;
+	private Date dateNaissance;
 	@Column(name="contact_age")
 	private int age;
 	public long getId() {
@@ -44,10 +44,10 @@ public class ContactEntity {
 		this.prenom = prenom;
 	}
 	public Date getDate() {
-		return date;
+		return dateNaissance;
 	}
 	public void setDate(Date date) {
-		this.date = date;
+		this.dateNaissance = date;
 	}
 	public int getAge() {
 		return age;

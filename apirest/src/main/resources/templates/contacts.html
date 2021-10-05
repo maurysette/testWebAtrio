@@ -7,7 +7,7 @@
 <body>
 <tr th:each="contact : ${contacts}">
 <ul>
-	<li><td th:text="${contact.nom}"></td> <td th:text="${contact.prenom}"><td th:text="${contact.dateNaissance}"><td th:text="${contact.age}"></td></a></li> 
+	<li><td th:text="${contact.nom}"></td> <td th:text="${contact.prenom}"></td> <td th:text="${#dates.format(contact.dateNaissance,'dd-MM-yyyy')}"></td> <td th:utext="${contact.age}"></td></a></li> 
 </ul> 
 </body>
 </html>
