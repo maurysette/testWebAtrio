@@ -5,13 +5,15 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
 
 import com.testapi.webatrio.alixiamaury.entity.ContactEntity;
+import com.testapi.webatrio.alixiamaury.model.ContactModel;
 
-
+@Transactional
 @Repository
 public class ContactRepository  {
 	
@@ -22,14 +24,13 @@ public class ContactRepository  {
 		return em.createQuery("SELECT c FROM Contact c", ContactEntity.class).getResultList();
 	}
 	
-	public String create(String name, String prenom,Date date,int age){
+	public String create(String name, String prenom,Date dateNaissance,int age){
 		ContactEntity entity = new ContactEntity() ;
 		entity.setNom(name);
 		entity.setPrenom(prenom);
-		entity.setDate(date);
+		entity.setDate(dateNaissance);
 		entity.setAge(age);
 		em.persist(entity);
-		em.getTransaction().commit();
 	    return "Création réussie";
 	}
 	
@@ -75,14 +76,14 @@ public class ContactRepository  {
 		return "modification de l'âge effectuée " ;
 	}
 	
-	public String updateDate(long id, Date date) {
+	public String updateDate(long id, Date dateNaissance) {
 		ContactEntity entity = em.find(ContactEntity.class, id);
-		if(date.toString().isEmpty()){
+		if(dateNaissance.toString().isEmpty()){
 			return "le champ date est vide";
 		}else if(entity == null) {
 			return "identifiant inconnu";
 		}
-		entity.setDate(date);
+		entity.setDate(dateNaissance);
 		return "modification de l'âge effectuée " ;
 	}
 }

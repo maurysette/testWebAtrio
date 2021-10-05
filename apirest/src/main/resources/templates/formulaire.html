@@ -5,15 +5,15 @@
 <title>Informations modifications delete</title>
 </head>
 <body>
-
 <H3>formulaire contact </H3>
-<form th:action="@{/api/" method="post">
- <input type="text" name="nom" th:value="${api.nom}" />
- <input type="text" name="prenom" th:value="${api.prenom}" />
- <input type="text" name="dateNaissance" th:value="${api.dateNaissance}" />
-  <input type="text" name="age" th:value="${api.age}" />
+<form th:action="@{/formulaire}" method="post" >
+ <input type="text" name="nom" th:value="${nom}" />
+ <input type="text" name="prenom" th:value="${prenom}" />
+ <input type="text" name="dateNaissance" th:value="${dateNaissance}" />
+  <input type="text" name="age" th:value="${age}" />
  <input type="submit" value="ajouter">
-	 </form>
+	</form>
+	<p th:text="${message}"></p>
 </body>
 </html>
 
