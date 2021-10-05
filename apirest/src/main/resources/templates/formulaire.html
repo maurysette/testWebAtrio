@@ -6,7 +6,7 @@
 </head>
 <body>
 <H3>formulaire contact </H3>
-<form th:action="@{/api/formulaire}" method="post" >
+<form th:action="@{api/nouveauContact}" method="post" >
  <input type="text" name="nom" th:value="${nom}" />
  <input type="text" name="prenom" th:value="${prenom}" />
  <input type="text" name="dateNaissance" th:value="${dateNaissance}" />

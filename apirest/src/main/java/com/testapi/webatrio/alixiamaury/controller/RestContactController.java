@@ -17,13 +17,12 @@ public class RestContactController {
 	@Autowired
 	ContactService service ;
 	
-	@PostMapping("api/formulaire")
+	@PostMapping("api/nouveauContact")
 	public String  createContact(@RequestParam String nom,@RequestParam String prenom,@RequestParam Date dateNaissance,@RequestParam int age ) {
 		String result = service.create(nom, prenom, dateNaissance, age);
 		return result;
 	}
-	
-	@GetMapping("api/formulaire")
+	@GetMapping("api/contact")
 	public List<ContactEntity> listPokemonView()
 	{
 		List<ContactEntity> contacts = service.listeContact();
