@@ -20,5 +20,7 @@ public class ContactController {
     public String formulaire() {
         return "formulaire";
     }
+	
+	
 
 }
